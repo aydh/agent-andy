@@ -210,4 +210,4 @@ __marimo__/
 .dolt/
 .doltcfg/
 beads_*/
-/config.yaml
+/.beads/config.yaml
