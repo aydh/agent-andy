@@ -13,18 +13,21 @@ digest workflow below without further prompting.
 
 ## Digest Workflow
 
-1. **Search the last 3–5 days** across the focus areas listed in `topics.md`.
+1. **In parallel, search the last 3–5 days** across all focus areas in `topics.md`.
    Default focus areas (if `topics.md` is absent or empty):
    - Model releases & benchmarks
    - AI agents & tooling
-   - Enterprise AI adoption
-   - AI policy & regulation
-   - Research breakthroughs
+   - Enterprise AI adoption & deployment
+   - AI policy, regulation & governance
+   - Research breakthroughs (papers, evals, interpretability)
 
-2. **Identify the single most important development** — the one a CTO, investor,
+2. **Aggregate all results, then rank by significance.** Do not re-search sources
+   during the analysis step.
+
+3. **Identify the single most important development** — the one a CTO, investor,
    or policy lead would most regret missing.
 
-3. **Format the response** as follows (no deviation):
+4. **Format the response** as follows (no deviation):
 
 ---
 
@@ -37,9 +40,13 @@ matters right now. Be direct. Avoid hedging._
 
 ## This Week in AI
 
-- **[Title](url)** — One sentence. What happened and why it matters. `[fintech]`
-  or `[enterprise]` tag if relevant.
-- … _(6–10 items total, ordered by significance, not chronology)_
+_Replace each line below with a real item — do not output the placeholder text._
+
+- **[Article title as hyperlink](https://actual-url)** — One sentence on what happened and why it matters. Tag `[fintech]` or `[enterprise]` if relevant.
+
+_(Generate 6–10 items total, ordered by significance, not chronology. If fewer than
+6 stories meet the signal threshold this period, include what's available and note
+the quieter-than-usual week rather than padding with low-signal items.)_
 
 ---
 
@@ -50,6 +57,8 @@ matters right now. Be direct. Avoid hedging._
 - **One sentence per item.** No exceptions — if you can't say it in one
   sentence, you don't understand it well enough yet.
 - **Always include a link.** No link = no item.
+- **Paywalled content:** Include with a `[paywalled]` tag if the story is
+  significant enough; summarise what's behind the wall based on public reporting.
 - **Tag `[fintech]` or `[enterprise]`** whenever a development has a clear
   angle for financial services or large-scale enterprise integration.
 - **Avoid**: "groundbreaking", "revolutionary", "game-changing", "landmark" —
@@ -58,8 +67,10 @@ matters right now. Be direct. Avoid hedging._
 
 ## Saving Digests
 
-After generating a digest, ask the user: *"Save this digest to `digests/`?"*
-If yes, write it to `digests/YYYY-MM-DD.md` (using the Monday of that week).
+After generating a digest, automatically save it to `digests/YYYY-MM-DD.md`.
+Use the Monday of the calendar week containing today's date as the filename
+(e.g. if today is Wednesday 2026-03-04, the filename is `digests/2026-03-02.md`;
+if today is Monday, use today's date). Confirm the saved path to the user.
 
 ## Tone
 

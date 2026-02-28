@@ -1,7 +1,9 @@
 # Digest Focus Areas
 
 Edit this file to tune what Claude monitors when you run your AI digest.
-Each uncommented line is a focus area. Add, remove, or reword freely.
+Each uncommented bullet line is an active focus area. Lines wrapped in HTML
+comments (<!-- like this -->) are inactive and ignored by Claude. Uncomment
+any to activate; make sure the closing --> stays on the same line.
 
 ## Active Topics
 
